@@ -1,9 +1,30 @@
 Rails.application.routes.draw do
   root to: "features#index"
-  resources :features do
-    resources :comments
-  end
-  #get "posts/" => "features#index"
+
+  # resources :features do
+  #   resources :comments
+  # end
+  
+  get "features/:feature_id/comments" => "comments#index", as: :feature_comments
+  post "features/:feature_id/comments" => "comments#create"
+  get "features/:feature_id/comments/new" => "comments#new", as: :new_feature_comment
+  get "features/:feature_id/comments/:id/edit" => "comments#edit", as: :edit_feature_comment
+  get "features/:feature_id/comments/:id" => "comments#show", as: :feature_comment
+  patch "features/:feature_id/comments/:id" => "comments#update"
+  put "features/:feature_id/comments/:id" => "comments#update"
+  delete "features/:feature_id/comments/:id" => "comments#destroy"
+
+
+  get "features/" => "features#index", as: :features
+  post "features/" => "features#create"
+  get "features/new" => "features#new", as: :new_feature
+  get "features/:id/edit" => "features#edit", as: :edit_feature
+  get "features/:id" => "features#show", as: :feature
+  patch "features/:id" => "features#update"
+  put "features/:id" => "features#update"
+  delete "features/:id" => "features#destroy"
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
