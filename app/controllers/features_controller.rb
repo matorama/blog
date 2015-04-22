@@ -6,6 +6,9 @@ class FeaturesController < ApplicationController
 
 	def show
 		@feature = Feature.find(params[:id])
+
+		@comment = Comment.new
+		@comment.feature_id = @feature.id
 	end
 
 	def new

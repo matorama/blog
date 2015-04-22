@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "features#index"
-  resources :features
+  resources :features do
+    resources :comments
+  end
   #get "posts/" => "features#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

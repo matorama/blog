@@ -1,5 +1,8 @@
 <h1><%= @feature.title %></h1>
 <p><%= @feature.body %></p>
+<h3>Comments</h3>
+<%= render partial: 'features/comment', collection: @feature.comments %>
+<%= render partial: 'comments/form' %>
 <%= link_to "<< Back to Blog Post List", features_path %>
 <%= link_to "delete", feature_path(@feature), method: :delete, data: {confirm: "Really delete the blog post?"}%>
 <%= link_to "edit", edit_feature_path(@feature) %>
