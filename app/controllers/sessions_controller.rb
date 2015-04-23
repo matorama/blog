@@ -9,11 +9,11 @@ class SessionsController < ApplicationController
 		# which gets stored in a cookie on our hard drive 
 		# we'll store the user's ID to make for a fast 
 		# User.find later on 
-		session[:user_id] = user.id.to_s 
-		redirect_to users_path 
+			session[:user_id] = user.id.to_s 
+			redirect_to new_feature_path
 
 		else 
-		redirect_to login_path 
+			redirect_to login_path 
 		end 
 	end 
 

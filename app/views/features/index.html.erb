@@ -8,4 +8,21 @@
   <% end %>
 </ul>
 
+
+<h1>Log In</h1>
+<%= form_for :login do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit 'Log In' %>
+  </div>
+<% end %>
+
+
 <%= link_to "Create a New Blog Post", new_feature_path, class: "new_feature" %>

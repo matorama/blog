@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: "features#index"
 
+  # resources :users
   # resources :features do
   #   resources :comments
   # end

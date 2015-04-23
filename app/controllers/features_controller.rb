@@ -17,6 +17,7 @@ class FeaturesController < ApplicationController
 
 	def create
 		@feature = Feature.new(params.require(:feature).permit(:title, :body))
+  		@feature.user = current_user
   		@feature.save
 
   		flash.notice = "Blog Post '#{@feature.title}' Added!"
