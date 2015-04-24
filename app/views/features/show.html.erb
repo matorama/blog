@@ -1,10 +1,12 @@
 <div class="container col-md-8 col-md-offset-2">
-	<% if current_user %>
+	
 		<div class="header">
 			<h1>Mat's Blog</h1>
 		</div>
 		<div class="feature">
 			<h2><%= @feature.title %></h2>
+			<!--  <p> Created at <%= feature.created_at.strftime("%m/%d/%Y %I:%M%p") %> </p> -->
+
 			<p><%= @feature.body %></p>
 			<br>
 			<br>
@@ -13,26 +15,22 @@
 		<div class="com">
 			<h3>Comments</h3>
 			<%=render partial: 'features/comment', collection: @feature.comments %>
+		</div>
+		<div class="com_form">
 			<%=render partial: 'comments/form' %>
+		</div>
+			
 			<%=link_to "<< Back to Blog Post List", features_path %>
 
+
+
+		<% if current_user %>
 			<%= link_to "delete", feature_path(@feature), method: :delete, data: {confirm: "Really delete the blog post?"}%>
 			<%= link_to "edit", edit_feature_path(@feature) %>
-		</div>
+		
 
-		<% else %>
-
-
-			<h2><%= @feature.title %></h2>
-			<p><%= @feature.body %></p>
-			<h3>Comments</h3>
-			<%=render partial: 'features/comment', collection: @feature.comments %>
-			<%=render partial: 'comments/form' %>
-			<%=link_to "<< Back to Blog Post List", features_path %>
-
-
-			
 
 		<%end%>
+		
 
 </div>
