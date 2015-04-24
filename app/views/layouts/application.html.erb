@@ -7,10 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
 <% if logged_in? %>
 	You are currently logged in as: <%=current_user.name %>
 	<%= link_to "Log out", logout_path, method: :delete %>
 <% end %>
+</div>
 
 <p class="flash"><%= flash.notice %></p>
 <%= yield %>
