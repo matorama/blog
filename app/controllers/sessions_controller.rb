@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 		# we'll store the user's ID to make for a fast 
 		# User.find later on 
 			session[:user_id] = user.id.to_s 
-			redirect_to new_feature_path
+			redirect_to features_path
 
 		else 
 			redirect_to login_path 

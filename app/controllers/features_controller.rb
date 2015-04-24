@@ -12,7 +12,11 @@ class FeaturesController < ApplicationController
 	end
 
 	def new
-		@feature = Feature.new
+		if current_user 
+			@feature = Feature.new
+		else
+			redirect_to "/login"
+		end
 	end
 
 	def create
