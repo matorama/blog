@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   put "features/:id" => "features#update"
   delete "features/:id" => "features#destroy"
 
-  # get "users" => "users#index" 
-  # get "signup" => "users#new" 
+  get "users" => "users#index" 
+  get "signup" => "users#new" 
   post "users" => "users#create"
 
   #routes for logging in/out
