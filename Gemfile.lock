@@ -132,8 +132,12 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
+    timezone (0.3.9)
     turbolinks (2.5.3)
       coffee-rails
+    tzdetect (0.1.3)
+      json (>= 1.7)
+      tzinfo (>= 0.3.33)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.1)
@@ -161,6 +165,8 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
+  timezone
   turbolinks
+  tzdetect
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

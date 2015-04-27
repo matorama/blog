@@ -30,6 +30,10 @@ gem 'bootstrap-sass', '~> 3.2.0.2'
 
 gem 'rails_12factor'
 
+gem 'tzdetect'
+
+gem 'timezone'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -1,26 +1,107 @@
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+	background-color: #F5CC94;
+	
+	
+	
+}
+
 h1 {
+	
+	font-size: 64px;
+	background-color: white;
+	padding: 0 0 10px 0;
+	width:350px;
+	margin: auto;
+	border-radius: 15px;
+	color: blue;
+	color: #1A1D16;
 	text-align: center;
-	font-family: 200%;
+	
+
+}
+
+a {
+	/*color: #03499D*/;
+}
+
+
+li > a {
+	font-size: 24px;
+}
+
+h4 {
+	margin-bottom: 0px;
+}
+
+h2 {
+	margin-bottom: 0px;
 }
 
 .container {
 
 
+
 }
 
 .header {
+		background-image: url("Grenada.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 100px;
+
+
 	
-	background-color: lightblue
+
 }
 
 .feature {
 	border: 2px solid black;
+	background-color: white;
+	margin-top: 20px;
+	border-radius: 15px;
+	/*color: #03499D;*/
+	display: block;
 }
 
 .com {
 	border: 2px solid black;
+	background-color: white;
+	margin-top: 30px;
+	border-radius: 15px;
+	/*color: #03499D*/
 }
+
+.footer {
+	display: inline-block;
+	
+
+}
+
+.date {
+/*	font-size: 12px;
+	padding-top: 0px;
+	margin-top: 0px;*/
+}
+
+textarea {
+	width: 750px;
+	height: 100px;
+
+}
+
+label {
+	display: inline-block;
+	width: 500px;
+}
+
+
+
 
 
 
@@ -42,5 +123,3 @@ h1 {
  *= require_self
  */
 
- @import "bootstrap-sprockets";
-@import "bootstrap";
