@@ -1,7 +1,9 @@
 class FeaturesController < ApplicationController
+	Time.zone = "Pacific Time (US & Canada)"
 
 	def index
 		@features = Feature.all
+		
 	end
 
 	def show

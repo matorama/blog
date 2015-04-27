@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	Time.zone = "Pacific Time (US & Canada)"
 	def create
 	  @comment = Comment.new(comment_params)
 	  @comment.feature_id = params[:feature_id]

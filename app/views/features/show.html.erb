@@ -7,7 +7,7 @@
 		<div class="feature col-md-8 col-md-offset-2">
 			<h2><%= @feature.title %></h2>
 
-			<p class="date"> Created at <%= @feature.created_at.strftime("%m/%d/%Y %I:%M%p")%></p>
+			<p class="date"> Created at <%= @feature.created_at.time.strftime("%m/%d/%Y %I:%M%p")%></p>
 		  
 
 			<p><%= @feature.body %></p>
@@ -29,8 +29,8 @@
 
 
 		<% if current_user %>
-			<%= link_to "delete", feature_path(@feature), method: :delete, data: {confirm: "Really delete the blog post?"}%> 
-			<%= link_to "edit", edit_feature_path(@feature) %>
+			<%= link_to "Delete", feature_path(@feature), method: :delete, data: {confirm: "Really delete the blog post?"}%> 
+			<%= link_to "Edit", edit_feature_path(@feature) %>
 		</div>
 		
 

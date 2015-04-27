@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController 
+	Time.zone = "Pacific Time (US & Canada)"
 	def new 
 	end 
 

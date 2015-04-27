@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # resources :features do
   #   resources :comments
   # end
-  
+
   get "features/:feature_id/comments" => "comments#index", as: :feature_comments
   post "features/:feature_id/comments" => "comments#create"
   get "features/:feature_id/comments/new" => "comments#new", as: :new_feature_comment
@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   put "features/:id" => "features#update"
   delete "features/:id" => "features#destroy"
 
-  get "users" => "users#index" 
-  get "signup" => "users#new" 
+  # get "users" => "users#index" 
+  # get "signup" => "users#new" 
   post "users" => "users#create"
 
   #routes for logging in/out

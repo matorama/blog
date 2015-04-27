@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	Time.zone = "Pacific Time (US & Canada)"
 	def index
 		@users = User.all
 	end
